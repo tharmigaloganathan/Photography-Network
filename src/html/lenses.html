@@ -1,0 +1,68 @@
+<head>
+
+    <link type="text/css" rel="stylesheet" href="../styles/browse-images.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="../controllers/lenses.js"></script>
+
+
+</head>
+<body ng-app="myApp" ng-controller="lensController">
+
+    <div class="ui fixed inverted menu">
+        <div class="ui fixed inverted menu">
+            <a href="index.html" class="item">
+                Home
+            </a>
+            <a href="your-customers.html" class="item">
+                Your Customers
+            </a>
+            <a  href="./your-photos.html" class="item">
+                Your Photos
+            </a>
+            <a href="./browse-images.html" class="item">
+                Browse Images
+            </a>
+            <a href="./add-image.html" class="item">
+                Add Image
+            </a>
+            <a href="./stats-numbers.html" class="item">
+                Stats By Numbers
+            </a>
+            <a href="./stats-likes.html" class="item">
+                Stats By Likes
+            </a>
+            <a href="./cameras.html" class="item">
+                View Cameras
+            </a>
+            <a href="./lenses.html" class="ui active item">
+                View Lenses
+            </a>
+        </div>
+    </div>
+    <div class = "parallax">
+        <div class="ptext">
+            View Lenses
+        </div>
+        <div style="margin-left: 475px"class="ptext2">
+            <table class="ui selectable inverted table">
+              <thead>
+                <tr>
+                  <th>LensID</th>
+                  <th>Lens Brand</th>
+                  <th>Lens Model</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="lens in lenses">
+                  <td>{{lens.lensID}}</td>
+                  <td>{{lens.lensBrand}}</td>
+                  <td>{{lens.lensModel}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</body>

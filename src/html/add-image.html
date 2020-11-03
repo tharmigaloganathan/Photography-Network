@@ -1,0 +1,72 @@
+<head>
+
+    <link type="text/css" rel="stylesheet" href="../styles/your-customers.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="../controllers/add-image.js"></script>
+
+
+</head>
+<body ng-app="myApp" ng-controller="imageController">
+
+    <div class="ui fixed inverted menu">
+        <div class="ui fixed inverted menu">
+            <a href="index.html" class="ui item">
+                Home
+            </a>
+            <a href="your-customers.html" class="item">
+                Your Customers
+            </a>
+            <a  href="./your-photos.html" class="item">
+                Your Photos
+            </a>
+            <a href="./browse-images.html" class="item">
+                Browse Images
+            </a>
+            <a href="./add-image.html" class="ui active item">
+                Add Image
+            </a>
+            <a href="./stats-numbers.html" class="item">
+                Stats By Numbers
+            </a>
+            <a href="./stats-likes.html" class="item">
+                Stats By Likes
+            </a>
+            <a href="./cameras.html" class="item">
+                View Cameras
+            </a>
+            <a href="./lenses.html" class="item">
+                View Lenses
+            </a>
+        </div>
+    </div>
+    <div class = "parallax">
+        <div class="ptext">
+            Add Image
+        </div>
+        <div class="ptext2">
+            LensID: &nbsp;
+            <div class="ui input focus" style="font-size: 14px;width: 20%;">
+                <input ng-model="LensID" type="text" placeholder="LensID">
+            </div>&nbsp; &nbsp;&nbsp; &nbsp;
+            CameraID: &nbsp;
+            <div class="ui input focus" style="font-size: 14px;width: 30%;">
+                <input ng-model="CameraID" type="text" placeholder="CameraID">
+            </div><br /><br /><br /><br />
+            EventID: &nbsp;
+            <div class="ui input focus" style="font-size: 14px;width: 30%;">
+                <input ng-model="EventID"  type="text" placeholder="EventID">
+            </div>&nbsp; &nbsp;&nbsp; &nbsp;
+            ImageURL: &nbsp;
+            <div class="ui input focus" style="font-size: 14px;width: 30%;">
+                <input ng-model="ImageURL" type="text" placeholder="ImageURL">
+            </div>&nbsp; &nbsp;&nbsp; &nbsp;
+            <br /><br /> <br /><br />
+
+            <div ng-click="uploadImage();" class="ui large teal submit button">Submit Photo</div><br /><br />
+            <br />
+        </div>
+    </div>
+</body>

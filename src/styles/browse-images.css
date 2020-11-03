@@ -1,0 +1,81 @@
+.body {
+    background-color: #001200 !important;
+}
+
+.parallax {
+    background-image: linear-gradient(
+    rgba(50,50,50,0.9),
+    rgba(0,0,0,0.9)),url("../background.jpg");
+    height: 100000px;
+    width:100%;
+    text-align: center;
+    vertical-align: text-bottom;
+    font-size: 80px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: linear-gradient(
+    rgba(50,50,50,0.9),
+    rgba(0,0,0,0.9)),url("../background.jpg");
+    height: 1000px;
+    width:100%;
+    text-align: center;
+    vertical-align: text-bottom;
+    font-size: 80px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ptext{
+    font-family: 'Gruppo', cursive;
+  position:absolute;
+  opacity: 1 !important;
+  top:20%;
+  /*left: 0%;*/
+  width:100%;
+  text-align:center;
+  color:#FFFFFF;
+  font-size:70px;
+  letter-spacing:8px;
+  /*text-transform:uppercase;*/
+}
+.ptext2{
+    /*font-family: 'Gruppo', cursive;*/
+  position:absolute;
+  opacity: 1 !important;
+  font-family: default;
+  top:40%;
+  margin-left: 350px;
+  /*left: 10%;*/
+  width:500px;
+  text-align:center;
+  color:#ffffff;
+  font-size:14px;
+  letter-spacing:0px;
+  text-transform:none;
+}
+
+.ptext3{
+    font-family: 'Gruppo', cursive;
+  position:absolute;
+  opacity: 1 !important;
+  /*font-family: 'Kanit', sans-serif;*/
+  top:35%;
+  /*left: 10%;*/
+  width:100%;
+  text-align:center;
+  color:#ffffff;
+  font-size:20px;
+  letter-spacing:0px;
+  text-transform:none;
+}

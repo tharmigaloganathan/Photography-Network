@@ -1,0 +1,78 @@
+<head>
+
+    <link type="text/css" rel="stylesheet" href="../styles/your-customers.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="../controllers/stats-likes.js"></script>
+
+
+</head>
+<body ng-app="myApp" ng-controller="StatLikeController">
+
+    <div class="ui fixed inverted menu">
+        <div class="ui fixed inverted menu">
+            <a href="index.html" class="item">
+                Home
+            </a>
+            <a href="your-customers.html" class="item">
+                Your Customers
+            </a>
+            <a  href="./your-photos.html" class="item">
+                Your Photos
+            </a>
+            <a href="./browse-images.html" class="item">
+                Browse Images
+            </a>
+            <a href="./add-image.html" class="item">
+                Add Image
+            </a>
+            <a href="./stats-numbers.html" class="item">
+                Stats By Numbers
+            </a>
+            <a href="./stats-likes.html" class="ui active item">
+                Stats By Likes
+            </a>
+            <a href="./cameras.html" class="item">
+                View Cameras
+            </a>
+            <a href="./lenses.html" class="item">
+                View Lenses
+            </a>
+        </div>
+    </div>
+    <div class = "parallax">
+        <div class="ptext">
+            Stats by Likes
+        </div>
+        <div class="ptext2">
+            CameraID: &nbsp;
+            <div class="ui input focus" style="font-size: 14px;width: 30%;">
+                <input ng-model="cameraID" type="text" placeholder="CameraID">
+            </div><br /><br /><br /><br />
+            <div ng-click="getData();" class="ui large teal submit button">
+                Generate!
+            </div><br /><br />
+
+            <table class="ui selectable inverted table">
+              <thead>
+                <tr>
+                  <th>Occasion</th>
+                  <th>Camera Brand</th>
+                  <th>Camera Model</th>
+                  <th>Number Of Likes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="row in rows">
+                  <td>{{row.occasionName}}</td>
+                  <td>{{row.cameraBrand}}</td>
+                  <td>{{row.cameraModel}}</td>
+                  <td>{{row.NumberOfLikes}}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</body>

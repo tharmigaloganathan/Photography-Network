@@ -1,0 +1,77 @@
+<head>
+
+    <link type="text/css" rel="stylesheet" href="../styles/browse-images.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="../controllers/browse-images.js"></script>
+
+
+</head>
+<body ng-app="myApp" ng-controller="imagesController">
+
+    <div class="ui fixed inverted menu">
+        <div class="ui fixed inverted menu">
+            <a href="index.html" class=" item">
+                Home
+            </a>
+            <a href="your-customers.html" class="item">
+                Your Customers
+            </a>
+            <a  href="./your-photos.html" class="item">
+                Your Photos
+            </a>
+            <a href="./browse-images.html" class="ui active item">
+                Browse Images
+            </a>
+            <a href="./add-image.html" class="item">
+                Add Image
+            </a>
+            <a href="./stats-numbers.html" class="item">
+                Stats By Numbers
+            </a>
+            <a href="./stats-likes.html" class="item">
+                Stats By Likes
+            </a>
+            <a href="./cameras.html" class="item">
+                View Cameras
+            </a>
+            <a href="./lenses.html" class="item">
+                View Lenses
+            </a>
+        </div>
+    </div>
+    <div class = "parallax">
+        <div class="ptext">
+            Browse Images
+        </div>
+        <div class="ptext2">
+            <br /><br /><br /><br />
+
+            <table class="ui selectable inverted table">
+              <thead>
+                <tr>
+                  <th>Photos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="photo in photos">
+                  <td>
+                      <a href="{{photo.image}}"> <img style="width: 700px" src="{{photo.image}}" /></a>
+                      <br /><br /><br />
+                      Created by: {{photo.fName + " " + photo.lName}} &nbsp;&nbsp;&nbsp; {{photo.pictureID}}
+                      <div style="text-align: right;">
+                      {{photo.numberOfLikes + " "}} <i ng-click="photo.numberOfLikes = photo.numberOfLikes + 1; addLike(photo.pictureID)" class="large red heart icon"></i></div>
+                      <br />
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="parallax2">
+
+    </div>
+</body>
